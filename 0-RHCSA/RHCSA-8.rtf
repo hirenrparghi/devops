@@ -1,0 +1,208 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs36\lang9 RHCSA - 8\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\ulnone\b0\fs28 ip addr >> check for the ip address.\par
+{\pntext\f1\'B7\tab}What is path? >> pwd\par
+{\pntext\f1\'B7\tab}absolute path: Always starts with /\par
+{\pntext\f1\'B7\tab}Relative path: where you want to do\par
+{\pntext\f1\'B7\tab}mkdir -p 1/2/3/4/5 = It will create directory inside.\par
+{\pntext\f1\'B7\tab}history -c = To remove history\par
+{\pntext\f1\'B7\tab}uname -a = kernal version of linux machine\par
+{\pntext\f1\'B7\tab}date= command will show you the date of your system >> entire date with time zone details\par
+{\pntext\f1\'B7\tab}date +%F = Full date 2021-08-25\par
+{\pntext\f1\'B7\tab}touch file-`date +%d-%m-%y`\par
+{\pntext\f1\'B7\tab}touch text\{1..100\}.txt = create 100 .txt file\par
+{\pntext\f1\'B7\tab}cat > file = create file with the name\par
+{\pntext\f1\'B7\tab}cat >> file = append the file with another file\par
+{\pntext\f1\'B7\tab}cat -b file = number in the file\par
+{\pntext\f1\'B7\tab}cp source destination = copy command\par
+{\pntext\f1\'B7\tab}cp -pv source destination= preserve the file properties\par
+{\pntext\f1\'B7\tab}cp -Rv source destination = copy direcory\par
+{\pntext\f1\'B7\tab}pwd = present working directory\par
+{\pntext\f1\'B7\tab}mv = move the content from one location to another location, use for rename as well.\par
+{\pntext\f1\'B7\tab}rmdir = to remove empty directory.\par
+{\pntext\f1\'B7\tab}rm -r = to remove file with confirmation \par
+{\pntext\f1\'B7\tab}rm -rf = without confirmation removal\par
+{\pntext\f1\'B7\tab}. = represent the current directory path\par
+{\pntext\f1\'B7\tab}.. = parent directory on which you are at the moment\par
+{\pntext\f1\'B7\tab}!66 = command entered in history of commands\par
+{\pntext\f1\'B7\tab}ls= list your files and directories\par
+{\pntext\f1\'B7\tab}ls -d = command to list direcotries only\par
+{\pntext\f1\'B7\tab}df= show partitions in your machine\par
+{\pntext\f1\'B7\tab}df -T= file systems \par
+{\pntext\f1\'B7\tab}who= who are logged in\par
+{\pntext\f1\'B7\tab}who -d = same as above\par
+{\pntext\f1\'B7\tab}who -r = run level on your machine\par
+{\pntext\f1\'B7\tab}who -H = who and when they logged in\par
+{\pntext\f1\'B7\tab}who -a = all the above details with ip address\par
+{\pntext\f1\'B7\tab}ps = list out the processes you are running\par
+{\pntext\f1\'B7\tab}ps -aux = how many proceses with details\par
+{\pntext\f1\'B7\tab}ps -U root=  userwise processes\par
+{\pntext\f1\'B7\tab}chmod 755 filename= to change permission of file\par
+{\pntext\f1\'B7\tab}chmod g+rwx filename = to change group permission\par
+{\pntext\f1\'B7\tab}chown root:user = to chnage owner from root to that user\par
+{\pntext\f1\'B7\tab}chgrp root file name = to change group of file\par
+{\pntext\f1\'B7\tab}du -sh /etc/* = to check the size of a directory files/folders\par
+{\pntext\f1\'B7\tab}tar cvf = create tar file\par
+{\pntext\f1\'B7\tab}tar xvf = extract tar file\par
+{\pntext\f1\'B7\tab}scp filename root@ipaddressofremoteserver:/path = copy file to remote server\par
+{\pntext\f1\'B7\tab}find -iname filename = to findout file in directory\par
+
+\pard\sa200\sl276\slmult1\qc\b Standard Input/output redirecting\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 stdin -0 (<), stdout -1(>), stderr 2 (2>)\par
+{\pntext\f1\'B7\tab}2>&1= redirect stdout and stderr in file\par
+{\pntext\f1\'B7\tab}ls /home/hiren >> /tmp/errors 2>&1 = append the standard error and standard output in /tmp/errors.\par
+{\pntext\f1\'B7\tab}date > timestamp\par
+{\pntext\f1\'B7\tab}date >> timestamp = continusly add the content to that file.\par
+{\pntext\f1\'B7\tab}tail -n 20 /var/log/messages > /home/hiren/logfile\par
+{\pntext\f1\'B7\tab}grep hiren /etc/passwd > /tmp/output\par
+{\pntext\f1\'B7\tab}grep hiren < /tmp/output= It will input the file.\par
+
+\pard\sa200\sl276\slmult1\b\fs32 Grep command with Regular Expression\par
+\b0\fs28 If you want to search text from the file.\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 grep <string> filename= search the string you are looking for\par
+{\pntext\f1\'B7\tab}grep -i <string> = ignore case sensitive\par
+{\pntext\f1\'B7\tab}grep -vi <string> = not matching the text line. \par
+{\pntext\f1\'B7\tab}grep -ve "First" -e "last" file =  remove first and last file.\par
+{\pntext\f1\'B7\tab}grep <string> -A 3 demofile - show 3 files after string\par
+{\pntext\f1\'B7\tab}grep <string> - A 1 demofile - show below line\par
+{\pntext\f1\'B7\tab}grep <string> - B 1 demofile - show above line\par
+{\pntext\f1\'B7\tab}grep <string> - C 1 demofile - show above/below line\par
+{\pntext\f1\'B7\tab}export GREP_COLOR='1;30;43' > - color of the greped letter will be changed\par
+{\pntext\f1\'B7\tab}cat /var/log/messages |grep "^Sep  4 23:50:29"\par
+
+\pard\sa200\sl276\slmult1\qc\b\fs36  Arching and Compressing\par
+\b0\fs28 archive file cant reduce the size inside the file. If we compress any file/folder it will reduce in size.\par
+All 3 has same functionality\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 gzip -gun zip >> compressing file\par
+{\pntext\f1\'B7\tab}bzip  - bun zip  >> compressing file\par
+{\pntext\f1\'B7\tab}zip >> Normal zipping file\par
+{\pntext\f1\'B7\tab}du -sh filename1 filename2 >> To know the file size\par
+{\pntext\f1\'B7\tab}tar -cvf tarfilename filename1 filename2 >> To create tar file\par
+{\pntext\f1\'B7\tab}tar -cvzf tarfilename filename1 filename2 \par
+{\pntext\f1\'B7\tab}tar -cvf archive.tar *.txt\par
+{\pntext\f1\'B7\tab}tar -uvf archive.tar *.txt -- update tar file or archive\par
+{\pntext\f1\'B7\tab}tar -tf archive.tar -- list all the files inside archive\par
+{\pntext\f1\'B7\tab}tar -xvf archive.tar -- extact tar files\par
+{\pntext\f1\'B7\tab}\b Compress tar files\b0\par
+{\pntext\f1\'B7\tab}tar -cvzf compressed.tar.gz *.txt - compress files\par
+{\pntext\f1\'B7\tab}tar -xvf compressed.tar.gz - extract compressed files\par
+{\pntext\f1\'B7\tab}\b Compress files using zip\b0\par
+{\pntext\f1\'B7\tab}zip test.zip *.txt - To create zip \par
+{\pntext\f1\'B7\tab}zip -d test.zip testgin2.txt  -- delete file from zip \par
+{\pntext\f1\'B7\tab}unzip test.zip -- unzip the already created zip \par
+
+\pard\sa200\sl276\slmult1 ===========================================================\par
+\b\fs32 vi and vim command\b0\fs28\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 dd - Delete current cursor positioned line\par
+{\pntext\f1\'B7\tab}d5d or 5dd - Delete the 5 lines below of cursor position\par
+{\pntext\f1\'B7\tab}x - Delete single character\par
+{\pntext\f1\'B7\tab}5x - Delete 5 character\par
+{\pntext\f1\'B7\tab}yy - Copy line current curosr position line\par
+{\pntext\f1\'B7\tab}y5y or 5yy - Copy 5 linex below the cursor\par
+{\pntext\f1\'B7\tab}p - paste copied lines below the cursor\par
+{\pntext\f1\'B7\tab}P - paste the copied lines above the cursor\par
+{\pntext\f1\'B7\tab}dw - Delete the sinle word\par
+{\pntext\f1\'B7\tab}u - Undo the last action\par
+{\pntext\f1\'B7\tab}J - join the line\par
+{\pntext\f1\'B7\tab}. - redo last action\par
+{\pntext\f1\'B7\tab}w - will move to the begingnig of the next word\par
+{\pntext\f1\'B7\tab}nw - will move to nth word beginning\par
+{\pntext\f1\'B7\tab}b - will move beginnig of the previous word\par
+{\pntext\f1\'B7\tab}nb - will move begninnig of the previous words\par
+{\pntext\f1\'B7\tab}\{ - move backward one paragraph\par
+{\pntext\f1\'B7\tab}\} - move forward one paragraph\par
+{\pntext\f1\'B7\tab}0 - will go to the home possition\par
+{\pntext\f1\'B7\tab}$ - will move to the end of of line position\par
+{\pntext\f1\'B7\tab}h <-\par
+{\pntext\f1\'B7\tab}l ->\par
+{\pntext\f1\'B7\tab}j below\par
+{\pntext\f1\'B7\tab}k  above\par
+{\pntext\f1\'B7\tab}shift +G - last line of the file\par
+{\pntext\f1\'B7\tab}Shift+h - go to the first line of the screen\par
+{\pntext\f1\'B7\tab}Shift+z - save and quit\par
+{\pntext\f1\'B7\tab}/StringName - search particular wordp in the file\par
+{\pntext\f1\'B7\tab}n - search strings from top to bottom\par
+{\pntext\f1\'B7\tab}N - search from bottom to top\par
+{\pntext\f1\'B7\tab}i - insert data before cursor position\par
+{\pntext\f1\'B7\tab}I - insert content starting of line\par
+{\pntext\f1\'B7\tab}a - it will append the line character\par
+{\pntext\f1\'B7\tab}A - it will append the characters from end of line\par
+{\pntext\f1\'B7\tab}o - insert a new line below cursor\par
+{\pntext\f1\'B7\tab}O - it will insert a new line above cursor\par
+{\pntext\f1\'B7\tab}s - subtitute the stream\par
+{\pntext\f1\'B7\tab}r - replact the current character\par
+{\pntext\f1\'B7\tab}:set nu - set line numbers\par
+{\pntext\f1\'B7\tab}:set nonu - remove line numbers\par
+{\pntext\f1\'B7\tab}:<specify line number> - specific line number\par
+{\pntext\f1\'B7\tab}:r /root/test - copy the content of test file in cursor current position\par
+{\pntext\f1\'B7\tab}:r !date - command to output will past e in current cursor position\par
+{\pntext\f1\'B7\tab}whereis python -- check for the path veriable\par
+
+\pard\sa200\sl276\slmult1\b Open SSH Server & Client Configuration\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0\fs32 groupadd hirenp\par
+{\pntext\f1\'B7\tab}usermod -aG hiren hirenp\par
+{\pntext\f1\'B7\tab}ssh-keygen -t rsa = generate ssh key \par
+{\pntext\f1\'B7\tab}ssh-copy-id hiren@192.168.0.1\par
+{\pntext\f1\'B7\tab}man -s 5 sshd_config = all commands of sshd\par
+
+\pard\sa200\sl276\slmult1 ==============================================\par
+\b To Gain the access without password\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0 Reboot the server > Go to the kernel > find the line with \b linux16 \b0 at the end of file add\b  rd.break console=tty1 \b0\par
+{\pntext\f1\'B7\tab}\b press ctr+x\b0\par
+{\pntext\f1\'B7\tab}\b mount\b0\par
+{\pntext\f1\'B7\tab}\b mount /sysroot\b0\par
+{\pntext\f1\'B7\tab}\b mount |grep sysroot\b0\par
+{\pntext\f1\'B7\tab}\b mount -o remount.rw /sysroot\b0\par
+{\pntext\f1\'B7\tab}\b igrep sysroot\b0\par
+{\pntext\f1\'B7\tab}\b chroot /sysroot\b0\par
+{\pntext\f1\'B7\tab}\b passwd\b0\par
+{\pntext\f1\'B7\tab}\b touch /.autorelabel\b0\par
+{\pntext\f1\'B7\tab}\b exit & exit\b0\par
+{\pntext\f1\'B7\tab}\b\fs36 Topic :: To send File from one server to another server\b0\fs32\par
+{\pntext\f1\'B7\tab}\fs28 scp filename root@192.168.0.1:/root/\fs32\par
+{\pntext\f1\'B7\tab}\fs28 scp nmcli file1 file3 file3 root@ip:/root/ = to send multiple file\fs32\par
+{\pntext\f1\'B7\tab}\fs28 scp -r foldername root@192.168.0.:/root/ = to send directories \fs32\par
+{\pntext\f1\'B7\tab}\fs28 scp -C filename root@192.168.0.0:/root/foldername = to send compressed folder\fs32\par
+{\pntext\f1\'B7\tab}\fs28 scp -vp filename root@192.168.0.0:/root = to send file preserving time\fs32\par
+{\pntext\f1\'B7\tab}\fs28 scp -l 500 filename root@192.168.3.0:/tmp  = to send data withing limit of bandwidth here we have restricted to 500KBPS\fs32\par
+{\pntext\f1\'B7\tab}\b\fs28 Linux Processes - Listing and Managing Processes\b0\fs32\par
+{\pntext\f1\'B7\tab}\fs28 sleep 300 &\fs32\par
+{\pntext\f1\'B7\tab}\fs28 Stages of Linux processes\fs32\par
+{\pntext\f1\'B7\tab}\fs28 Running = Process is runnign, \fs32\par
+{\pntext\f1\'B7\tab}\fs28 Waiting=  Not allocated resources. Waiting for resources. Interaptable and uninterptable waiting process\fs32\par
+{\pntext\f1\'B7\tab}\fs28 Stopped= \fs32\par
+{\pntext\f1\'B7\tab}\fs28 Orphaned= Exist within child running \fs32\par
+{\pntext\f1\'B7\tab}\fs28 Zombie=  haulted process, stuck process, died but not exist in the process table -Have to reboot machine to remove the zombie process\fs32\par
+{\pntext\f1\'B7\tab}\fs28 ps -aux |grep Z = findout zombie process in linux\fs32\par
+{\pntext\f1\'B7\tab}\fs28 ps -ef = all the processes in the system\fs32\par
+{\pntext\f1\'B7\tab}\fs28 ps -C ssh = process with name\fs32\par
+{\pntext\f1\'B7\tab}\fs28 ps -aux --sort=-pcpu,+pmem = all the process with cpu and memory\fs32\par
+{\pntext\f1\'B7\tab}\fs28 ps -aux = all process by users\fs32\par
+{\pntext\f1\'B7\tab}\fs28 pgrep -u root = processes running by the root\fs32\par
+{\pntext\f1\'B7\tab}\fs28 pgrep -l user = userwise process\fs32\par
+
+\pard\sa200\sl276\slmult1\b\fs36 Disk Partitioning\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\b0\fs32\par
+{\pntext\f1\'B7\tab}\par
+{\pntext\f1\'B7\tab}\par
+{\pntext\f1\'B7\tab}\par
+{\pntext\f1\'B7\tab}\par
+
+\pard\sa200\sl276\slmult1\fs28\par
+\par
+\par
+\ul\b\fs36\par
+\par
+
+\pard\sa200\sl276\slmult1\qc\ulnone\b0\fs22\par
+}
+ 

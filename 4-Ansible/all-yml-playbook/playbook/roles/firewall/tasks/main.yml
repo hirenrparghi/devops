@@ -1,0 +1,28 @@
+### Firewalld Changes
+
+- name: Change SSH Port
+  lineinfile:
+          path: /etc/ssh/sshd_config
+          state: present
+          regexp: '#Port 22'
+          line: "Port 8756"
+  become: yes
+
+### Restart SSH
+
+- name: Restart SSH Service
+  systemd: state=restarted name=sshd
+  become: yes
+
+### Enter 8756 In firewalld allow list
+
+- name: Enter Port 8756 in Firewalld
+  command: firewall-cmd --zone=public --add-port=8756/tcp
+  become: yes
+
+
+### Restart Firewalld
+
+- name: Restart Firewalld
+  systemd: state=restarted name=firewalld
+  become: yes

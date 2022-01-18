@@ -1,0 +1,7 @@
+---
+- hosts: demo
+  become: yes
+#  remote_user: USERNAME
+  roles:
+    - zabbix.agent
+

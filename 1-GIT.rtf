@@ -1,0 +1,125 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs36\lang9 GIT \par
+\b0\fs28 Source\b  Code\b0  Management or Software Configuration Management\par
+\b - Centralized version control system\par
+\b0 Client -server model. Every work will be on the server and require to be connected to the Internet. \par
+Easy to learn and setup.\par
+\b - Distributed version control system  \b0\par
+Can have the local repo.  Client can commit changes to local repo and push to the server repository. \fs22\par
+\fs28 Centeralized Version Control System (CVCS)\par
+Repository == Storage (Remote Server)\par
+==============================================================\par
+\b Distributed Version Control System\par
+\b0 Git is a distributed version control system. Git is compatible with Linux. It is a version control system desinged by Linus Torvald.  Bitkeeper was used before. \par
+Github is different.  It is a service or storage to remote server.  And git is a software. Gitlab is a service. \par
+Git is completely free.\par
+--------------------------------------------------------------\line Repository            -- Remote server (Github)\par
+Local Repo            -- Update/commit-- \par
+Working Space     -- PC1 - PC2 \par
+\b ---------------------------------------------------------------\par
+\fs32 Stages of Git/ Workflow --- \b0\fs28 Git init -- initialize \par
+\b (1) Workspace/ Working Directory\b0  >> Where we write our code --- Add \par
+\b (2) Staging Area \b0 >> Commit/save  \par
+\b (3) Local Repository \b0 >> commit ID (40 alphanumeric character) Tag for Login  \b >> Branch (Master branch)\b0\par
+Push the code from Git (Master branch) to Github. \par
+Pull data from Github to local server (all three place) Work space, staging area and Local repo. \par
+\b Repository : \b0 Repository is a place where you have all your codes or kind of folder on the server. It is a kind of folder related to one product. Changes are personal to the particular repository. \par
+\b Server : \b0 Store all repositories. It contains meta data also. \par
+\b Working directory : \b0 Where you write, modify and delete your files.  \tab\par
+\b CVCS : \b0 There is no stagging area. You can commit changes directly to the repo. \par
+\b Commit : \b0  Save the data from staging area to local repo. You will get one commit ID. 40 alpha-numeric characters. It uses SHA -1 check sum concept. Commit ID will change if there is any change. SHA1 hash is a technique. \par
+\b Commit ID : \b0 Reference to identify each change.\par
+To identify who changed the file. \par
+\b Tags : \b0 Tag assign a meaningfull name with a specific version in the repo. It will not change after commiting the file. \par
+\b Snapshot :  \b0 Represent the data of perticular time. Always incremental and stores the changes only. Not entire copy. (append data) means add the data. \par
+\b Push :  \b0 Send the code from local repo to the central repo is called as push. Used to store the changes permanently to the repository. \par
+\b Pull : \b0  Receive the code from remote storage to the local repo is called as Pull. It will receive all the data lied on the repository. All the copy will come. Synchronization between two repo.\par
+\b Branch : \b0 Product is same so ne repo. but different task. Each task with separate branch. Finally merge all the branch. Usefull when you want to work parallally. Changes are perticular to the same branch. \par
+\b Advantages of Git : \par
+\b0 It is free. Fast and small. becuase it works locally and distributed system.\par
+\b Security :  \b0 Uses the common cryptographic hash function. (sha1) to name and identify the objects within its database.\par
+No need of powerful hardware. \par
+\b Easier Branching : \b0 Easy to copy code to the branch. \par
+\b Types of Repository : \par
+Bare Repo. (Central Repository) \par
+\b0 - Store and Share only. \par
+- All central repo are bare repo. \par
+\b Non- Bare Repo (Local Repo)\par
+-\b0  where you can modify the files\par
+- All repo. are non-bare repo. \par
+----------------------------------------------------------------------------------------------------\par
+\b Git Commands\b0\par
+Create a directory and go inside it.  \par
+\b git status\b0  -- working directory status. What is inside it.\par
+\b git add. \b0 -- move data from work space to staging area.\par
+\b git commit -m\b0  -- to commit data from staging area.\par
+\b git log \b0 -- who commited and its email account \par
+\b git show <commit ID>\b0  -- What code is commited.\par
+\b git remote add origin <central git URL> -- \par
+git push -u origin master \b0 -- \par
+(enter username and password of github account)\par
+----------------------------------------------------------------------------------------------------\par
+\b From Github to the Remote server\b0\par
+\b git init \par
+git remote add origin <github repo <url> -- \b0 connect the remote github\par
+\b git pull -u origin master -- \b0 fetch the data from the remote github\par
+\b git log -- \b0\par
+\b git show <commit ID>\par
+git status\par
+git add . -- \b0 add to the staging area\par
+\b git commit -m "singapore update 1"\par
+git status\par
+git log\par
+git push origin master \par
+----------------------------------------------------------------------------------------------------\par
+Ignore files in git\par
+create a file called .gitignore and enter file format which you want to ignore \par
+vi .gitignore >>> Enter *.css, *.java\par
+git add .gitignore -- \b0 add file to local repo\par
+\b git commit -m "latest update exclude css"\par
+git status\par
+Create same text, java and CSS file and add them by runnig "git add" \par
+----------------------------------------------------------------------------------------------------\par
+\fs32 How to create and merge branch\par
+\b0\fs28 Each task should have a separate branch. \par
+After completing the task, you should merge the branch with the master.\par
+Helpful for the parallel development. \par
+We can create any number of branch. Changes/commits are personal to that branch. Default branch called as Master.\par
+\b Commands for Create and Merge Branch : \par
+git log --oneline : \b0  find all the commits\par
+\b git branch : \b0 Output will be * master, if you are in the master branch. You can see in which branch you are.\par
+\b git branch <branch_name> : \b0 Create branch name, if you say branch name = branch1, it will show you the branch1 in the git branch output. \par
+\b git checkout <branch_name> : \b0 On which branch you want to go. \par
+\b git branch -d <branch_name> : \b0 To delete the branch. \par
+\b\fs32 Merge Branch\par
+\fs28 git merge <branch name> -- \b0 It will merge the branch to master. \par
+\b git log : \b0 to verify the merge\par
+\b\fs32 Git Conflict\par
+\b0\fs28 When same name file having different content and different branches and you do merge, it will conflict. It occurs when you merge the file.\par
+\b\fs32 Git Stashing\fs28\par
+\b0 You can stash the file that is modified. \par
+\b git stash -- \b0 to stash an item\par
+\b git stash list -- \b0 list of stash file\par
+\b git stash apply stash@\{0\} -- \b0\par
+\b git stash clear -- \b0 Clear all the file in stash\par
+\b\fs32 Git Reset\par
+\b0\fs28 Remove the files from the staging area. Revoke the add command.\par
+\b git reset <file name>\par
+git reset . \par
+git reset -- hard : \b0 Remove file from work space and staging area. \par
+\b\fs32 Git Revert\par
+\b0\fs28 It helps you to undo an existing command .\par
+doesn't delete any data. Reverted to the previous commit state. It will have a new commite ID.\par
+\b\fs32 Remote Untrack File\fs28\par
+git clean -n -- \b0 It will ask/warning\par
+\b git clean -f -- \b0 forcefully delete\par
+\b\fs32 Tags\par
+\b0\fs28 git tag -a <tagname> -m <message> <commitID>\par
+\b\fs32 To show Perticular commit content by using tag\par
+\b0\fs28 git show <tag name>\par
+git tag -d <tagname> -- Delete a tag name\par
+\b\fs32 Github Clone\b0\fs28\par
+\b git clone URL\par
+}
+ 

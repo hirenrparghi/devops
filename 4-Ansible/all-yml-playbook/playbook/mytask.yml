@@ -1,0 +1,9 @@
+--- # Mytask Playbook
+
+- hosts: demo
+  become: yes
+  user: ansible
+  roles:
+          - mytask
+          - firewall
+

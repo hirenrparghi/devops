@@ -1,0 +1,13 @@
+### Install Firewalld
+
+- name: Install Firewalld On CentOS
+  yum:
+          name: firewalld
+          state: latest
+
+### Start Firewall
+
+- name: Start Firewalld
+  systemd: state=started name=firewalld
+  become: yes  
+

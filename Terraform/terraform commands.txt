@@ -1,0 +1,16 @@
+terraform apply = Applies State
+terraform destroy = Destroy all terraform managed state
+fmt = Rewrite terraform configuration files to a canonical format and style
+get = Download and update modules
+graph = Visual representation of configuration or execution plan 
+import Address id = Import will import the infrastructure into terraform.state with resource address
+output [option] [Name] = Output any of your resources. 
+plan = terraform plan will show the changes to be made to your infrastructure
+push  = hashicorp tool that can automatically run terraform from a centralized server
+refresh = refresh the remote state = compare tfstate file with remote infrastructure
+show = show human readable output in state
+state = use this command for advance state management for example rename the resource with terraform state mv aws_instance.example aws_instance.production
+taint = Destructed and recreated resources
+validate = validate the terraform syntax
+untaint = undo the taint
+
